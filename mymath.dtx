@@ -1,0 +1,107 @@
+% \CheckSum{0}
+% \iffalse
+%<package>\NeedsTeXFormat{LaTeX2e}
+%<package>\ProvidesPackage{mymath}[2011/09/06 ver0.1]
+%<*driver>
+\documentclass[a4paper]{ltxdoc}
+\usepackage{mymath}
+\setcounter{StandardModuleDepth}{1}
+\GetFileInfo{mymath.sty}
+\begin{document}
+\DocInput{mymath.dtx}
+\end{document}
+%</driver>
+% \fi
+%
+% \title{mymath : 自分用数学マクロ集}
+% \author{寺村 俊紀}
+% \maketitle
+%
+% 自分用の数学用マクロ集。
+% 
+% \StopEventually{}
+%
+% \begin{macro}{\dif}
+% 常微分記号$\dif{x}$を出力する（$x$は引数）
+%    \begin{macrocode}
+%<*package>
+\newcommand{\dif}[1]{\frac{d}{d #1 } }
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\difn}
+% 常微分記号$\difn{x}{n}$を出力する（$x$は第1引数、$n$は第2引数）
+%    \begin{macrocode}
+%<*package>
+\newcommand{\difn}[2]{\frac{d^#2}{d #1^#2 } }
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\diff}
+% 常微分記号$\diff{x}{u}$を出力する（$x$は第1引数、$u$は第2引数）
+%    \begin{macrocode}
+%<*package>
+\newcommand{\diff}[2]{\frac{d #2 }{d #1 } }
+%</package>
+%    \end{macrocode}
+% \end{macro}
+% 
+% \begin{macro}{\diffn}
+% 常微分記号$\diffn{x}{u}{n}$を出力する（$x$は第1引数、$u$は第2引数、$n$は第3引数）
+%    \begin{macrocode}
+%<*package>
+\newcommand{\diffn}[3]{\frac{d^#3 #2 }{d #1^#3 } }
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\difp}
+% 偏微分記号$\difp{x}$を出力する（$x$は引数）
+%    \begin{macrocode}
+%<*package>
+\newcommand{\difp}[1]{\frac{\partial}{\partial #1 } }
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\difpn}
+% 偏微分記号$\difpn{x}{n}$を出力する（$x$は引数）
+%    \begin{macrocode}
+%<*package>
+\newcommand{\difpn}[2]{\frac{\partial^#2}{\partial #1^#2 } }
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\diffp}
+% 偏微分記号$\diffp{x}{u}$を出力する（$x$は第1引数、$u$は第2引数）
+%    \begin{macrocode}
+%<*package>
+\newcommand{\diffp}[2]{\frac{\partial #2 }{\partial #1 } }
+%</package>
+%    \end{macrocode}
+% \end{macro}
+% 
+% \begin{macro}{\diffpn}
+% 偏微分記号$\diffpn{x}{u}{n}$を出力する（$x$は第1引数、$u$は第2引数）
+%    \begin{macrocode}
+%<*package>
+\newcommand{\diffpn}[3]{\frac{\partial^#3 #2 }{\partial #1^#3 } }
+%</package>
+%    \end{macrocode}
+% \end{macro}
+% 
+% \begin{macro}{\KSE}
+% 蔵本-Sivashinsky方程式\\
+% \[ \KSE \]
+%    \begin{macrocode}
+%<*package>
+\newcommand{\KSE}{ \diffp{t}{u} + u \diffp{x}{u} + \diffpn{x}{u}{2} + \diffpn{x}{u}{4} = 0 }
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \Finale
