@@ -4,6 +4,7 @@
 %<package>\ProvidesPackage{mymath}[2011/09/06 ver0.1]
 %<*driver>
 \documentclass[a4paper]{ltxdoc}
+\usepackage{amsmath}
 \usepackage{mymath}
 \setcounter{StandardModuleDepth}{1}
 \GetFileInfo{mymath.sty}
@@ -20,6 +21,25 @@
 % 自分用の数学用マクロ集。
 % 
 % \StopEventually{}
+%
+% \begin{macro}{\mathvc}
+% ベクトル記号を作る(bmパッケージが使えないとき)
+%    \begin{macrocode}
+%<*package>
+\newcommand{\mathvc}[1]{\makebox{\boldmath$#1$}}
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\erf}
+%    誤差関数$\erf$
+%    \begin{macrocode}
+%<*package>
+\newcommand{\erf}{\text{erf}}
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
 %
 % \begin{macro}{\dif}
 % 常微分記号$\dif{x}$を出力する（$x$は引数）
@@ -118,7 +138,7 @@
 % \[ \SHEd\]
 %    \begin{macrocode}
 %<*package>
-\newcommand{\SHEd}{ \diffp{t}{u} = \left( r - \left( \difn{x}{2} + q_c^2 \right)^2 \right) u + b_3 u^3 - b_5 u^5 }
+\newcommand{\SHEd}{ \diffp{t}{u} = \left( r - \left( \difpn{x}{2} + q_c^2 \right)^2 \right) u + b_3 u^3 - b_5 u^5 }
 %</package>
 %    \end{macrocode}
 % \end{macro}
