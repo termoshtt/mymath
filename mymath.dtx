@@ -123,6 +123,16 @@
 %    \end{macrocode}
 % \end{macro}
 %
+% \begin{macro}{\KSEtw}
+% 蔵本-Sivashinsky方程式 定常進行波解\\
+% \[ \KSEtw \]
+%    \begin{macrocode}
+%<*package>
+\newcommand{\KSEtw}{ \diffp{t}{u} + \left(u -c \right) \diffp{x}{u} + \diffpn{x}{u}{2} + \diffpn{x}{u}{4} = 0 }
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
 % \begin{macro}{\SHE}
 % Swift-Hohenberg方程式\\
 % \[ \SHE\]
