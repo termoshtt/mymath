@@ -5,6 +5,8 @@
 %<*driver>
 \documentclass[a4paper]{ltxdoc}
 \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
 \usepackage{mymath}
 \setcounter{StandardModuleDepth}{1}
 \GetFileInfo{mymath.sty}
@@ -18,14 +20,33 @@
 % \maketitle
 %
 % 自分用の数学用マクロ集。
+% 使用にはamsmath,amssymb,colorが必要。
 % 
 % \StopEventually{}
 %
 % \begin{macro}{\mathvc}
-% ベクトル記号を作る(bmパッケージが使えないとき)
+%    ベクトル記号を作る(bmパッケージが使えないとき)
 %    \begin{macrocode}
 %<*package>
 \newcommand{\mathvc}[1]{\makebox{\boldmath$#1$}}
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\TODO}
+%    やるべきことを\TODO{強調表示}する
+%    \begin{macrocode}
+%<*package>
+\newcommand{\TODO}[1]{\textcolor{red}{#1}}
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\QUERY}
+%    気になることを\QUERY{色をかえて}表示する
+%    \begin{macrocode}
+%<*package>
+\newcommand{\QUERY}[1]{\textcolor{green}{#1}}
 %</package>
 %    \end{macrocode}
 % \end{macro}
@@ -39,6 +60,14 @@
 %    \end{macrocode}
 % \end{macro}
 %
+% \begin{macro}{\R}
+%    実数値体$\R$
+%    \begin{macrocode}
+%<*package>
+\newcommand{\R}{\mathbb{R}}
+%</package>
+%    \end{macrocode}
+% \end{macro}
 %
 % \begin{macro}{\dif}
 % 常微分記号$\dif{x}$を出力する（$x$は引数）
