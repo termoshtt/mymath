@@ -11,8 +11,7 @@
 \begin{document}
 \DocInput{mymath.dtx}
 \end{document}
-%</driver>
-% \fi
+%</driver> % \fi
 %
 % \title{mymath : 自分用数学マクロ集}
 % \author{寺村 俊紀}
@@ -113,44 +112,5 @@
 %    \end{macrocode}
 % \end{macro}
 % 
-% \begin{macro}{\KSE}
-% 蔵本-Sivashinsky方程式\\
-% \[ \KSE \]
-%    \begin{macrocode}
-%<*package>
-\newcommand{\KSE}{ \diffp{t}{u} + u \diffp{x}{u} + \diffpn{x}{u}{2} + \diffpn{x}{u}{4} = 0 }
-%</package>
-%    \end{macrocode}
-% \end{macro}
-%
-% \begin{macro}{\KSEtw}
-% 蔵本-Sivashinsky方程式 定常進行波解\\
-% \[ \KSEtw \]
-%    \begin{macrocode}
-%<*package>
-\newcommand{\KSEtw}{ \diffp{t}{u} + \left(u -c \right) \diffp{x}{u} + \diffpn{x}{u}{2} + \diffpn{x}{u}{4} = 0 }
-%</package>
-%    \end{macrocode}
-% \end{macro}
-%
-% \begin{macro}{\SHE}
-% Swift-Hohenberg方程式\\
-% \[ \SHE\]
-%    \begin{macrocode}
-%<*package>
-\newcommand{\SHE}{ \diffp{t}{u} = \left( r - \left( \nabla^2 + q_c^2 \right)^2 \right) u + b_3 u^3 - b_5 u^5 }
-%</package>
-%    \end{macrocode}
-% \end{macro}
-%
-% \begin{macro}{\SHEd}
-% 一次元Swift-Hohenberg方程式\\
-% \[ \SHEd\]
-%    \begin{macrocode}
-%<*package>
-\newcommand{\SHEd}{ \diffp{t}{u} = \left( r - \left( \difpn{x}{2} + q_c^2 \right)^2 \right) u + b_3 u^3 - b_5 u^5 }
-%</package>
-%    \end{macrocode}
-% \end{macro}
 %
 % \Finale
