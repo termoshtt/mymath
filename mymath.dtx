@@ -141,5 +141,22 @@
 %    \end{macrocode}
 % \end{macro}
 % 
+% \begin{macro}{\FourierChebyshev}
+% Fourier-Chebyshev展開
+%    \begin{macrocode}
+%<*package>
+\newcommand{\FourierChebyshev}[2]{#1(x,y) = \sum_{n,m = 0}^{\infty} #2_{nm} \text{e}^{ik_nx} T_m (y) + c.c.}
+%</package>
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\FourierChebyshevCos}
+% Fourier-Chebyshev展開(cos表現)
+%    \begin{macrocode}
+%<*package>
+\newcommand{\FourierChebyshevCos}[2]{#1(x,\theta) = \sum_{n=0}^{\infty} \text{e}^{ik_nx} \left( \frac{#2_{n0}}{2} + \sum_{m=1}^{\infty} #2_{nm} \cos(m\theta) \right) + c.c.}
+%</package>
+%    \end{macrocode}
+% \end{macro}
 %
 % \Finale
