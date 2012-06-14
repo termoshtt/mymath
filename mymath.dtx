@@ -15,11 +15,10 @@
 \end{document}
 %</driver> % \fi
 %
-% \title{mymath : 自分用数学マクロ集}
+% \title{mymath : 数学マクロ集}
 % \author{寺村 俊紀}
 % \maketitle
 %
-% 自分用の数学用マクロ集。
 % 使用にはamsmath,amssymb,colorが必要。
 % 
 % \StopEventually{}
@@ -145,7 +144,7 @@
 % Fourier-Chebyshev展開
 %    \begin{macrocode}
 %<*package>
-\newcommand{\FourierChebyshev}[2]{#1(x,y) = \sum_{n,m = 0}^{\infty} #2_{nm} \text{e}^{ik_nx} T_m (y) + c.c.}
+\newcommand{\FourierChebyshev}[1]{\sum_{n,m = 0}^{\infty} #1_{nm} \text{e}^{ik_nx} T_m (y) + c.c.}
 %</package>
 %    \end{macrocode}
 % \end{macro}
@@ -154,7 +153,7 @@
 % Fourier-Chebyshev展開(cos表現)
 %    \begin{macrocode}
 %<*package>
-\newcommand{\FourierChebyshevCos}[2]{#1(x,\theta) = \sum_{n=0}^{\infty} \text{e}^{ik_nx} \left( \frac{#2_{n0}}{2} + \sum_{m=1}^{\infty} #2_{nm} \cos(m\theta) \right) + c.c.}
+\newcommand{\FourierChebyshevCos}[1]{\sum_{n=0}^{\infty} \text{e}^{ik_nx} \left( \frac{#1_{n0}}{2} + \sum_{m=1}^{\infty} #1_{nm} \cos(m\theta) \right) + c.c.}
 %</package>
 %    \end{macrocode}
 % \end{macro}
