@@ -26,135 +26,105 @@
 % \begin{macro}{\mathvc}
 %    ベクトル記号を作る(bmパッケージが使えないとき)
 %    \begin{macrocode}
-%<*package>
 \newcommand{\mathvc}[1]{\makebox{\boldmath$#1$}}
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\TODO}
 %    やるべきことを\TODO{強調表示}する
 %    \begin{macrocode}
-%<*package>
-\newcommand{\TODO}[1]{\textcolor{red}{#1}}
-%</package>
+\newcommand{\TODO}[1]{\textcolor{red}{[TODO:#1]}}
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\QUERY}
 %    気になることを\QUERY{色をかえて}表示する
 %    \begin{macrocode}
-%<*package>
 \newcommand{\QUERY}[1]{\textcolor{green}{#1}}
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\erf}
 %    誤差関数$\erf$
 %    \begin{macrocode}
-%<*package>
 \newcommand{\erf}{\text{erf}}
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\R}
 %    実数値体$\R$
 %    \begin{macrocode}
-%<*package>
 \newcommand{\R}{\mathbb{R}}
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\dif}
 % 常微分記号$\dif{x}$を出力する（$x$は引数）
 %    \begin{macrocode}
-%<*package>
 \newcommand{\dif}[1]{\frac{d}{d #1 } }
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\difn}
 % 常微分記号$\difn{x}{n}$を出力する（$x$は第1引数、$n$は第2引数）
 %    \begin{macrocode}
-%<*package>
 \newcommand{\difn}[2]{\frac{d^#2}{d #1^#2 } }
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\diff}
 % 常微分記号$\diff{x}{u}$を出力する（$x$は第1引数、$u$は第2引数）
 %    \begin{macrocode}
-%<*package>
 \newcommand{\diff}[2]{\frac{d #2 }{d #1 } }
-%</package>
 %    \end{macrocode}
 % \end{macro}
 % 
 % \begin{macro}{\diffn}
 % 常微分記号$\diffn{x}{u}{n}$を出力する（$x$は第1引数、$u$は第2引数、$n$は第3引数）
 %    \begin{macrocode}
-%<*package>
 \newcommand{\diffn}[3]{\frac{d^#3 #2 }{d #1^#3 } }
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\difp}
 % 偏微分記号$\difp{x}$を出力する（$x$は引数）
 %    \begin{macrocode}
-%<*package>
 \newcommand{\difp}[1]{\frac{\partial}{\partial #1 } }
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\difpn}
 % 偏微分記号$\difpn{x}{n}$を出力する（$x$は引数）
 %    \begin{macrocode}
-%<*package>
 \newcommand{\difpn}[2]{\frac{\partial^#2}{\partial #1^#2 } }
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\diffp}
 % 偏微分記号$\diffp{x}{u}$を出力する（$x$は第1引数、$u$は第2引数）
 %    \begin{macrocode}
-%<*package>
 \newcommand{\diffp}[2]{\frac{\partial #2 }{\partial #1 } }
-%</package>
 %    \end{macrocode}
 % \end{macro}
 % 
 % \begin{macro}{\diffpn}
 % 偏微分記号$\diffpn{x}{u}{n}$を出力する（$x$は第1引数、$u$は第2引数）
 %    \begin{macrocode}
-%<*package>
 \newcommand{\diffpn}[3]{\frac{\partial^#3 #2 }{\partial #1^#3 } }
-%</package>
 %    \end{macrocode}
 % \end{macro}
 % 
 % \begin{macro}{\FourierChebyshev}
-% Fourier-Chebyshev展開
+% Fourier-Chebyshev展開$$\FourierChebyshev{\phi}$$
 %    \begin{macrocode}
-%<*package>
 \newcommand{\FourierChebyshev}[1]{\sum_{n,m = 0}^{\infty} #1_{nm} \text{e}^{ik_nx} T_m (y) + c.c.}
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\FourierChebyshevCos}
-% Fourier-Chebyshev展開(cos表現)
+% Fourier-Chebyshev展開(cos表現)$$\FourierChebyshevCos{\phi}$$
 %    \begin{macrocode}
-%<*package>
 \newcommand{\FourierChebyshevCos}[1]{\sum_{n=0}^{\infty} \text{e}^{ik_nx} \left( \frac{#1_{n0}}{2} + \sum_{m=1}^{\infty} #1_{nm} \cos(m\theta) \right) + c.c.}
-%</package>
 %    \end{macrocode}
 % \end{macro}
 %
